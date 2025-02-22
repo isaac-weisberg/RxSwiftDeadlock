@@ -26,9 +26,6 @@ class ViewController: UIViewController {
                 .flatMap { _ in
                     sharedSubscription
                 }
-                .flatMap { int in
-                    Observable.just(int)
-                }
                 .take(1)
         })
         

@@ -17,9 +17,6 @@ let oneSource = Observable.zip(sources.map { _ in
         .flatMap { _ in
             self.sharedSubscription
         }
-        .flatMap { int in
-            Observable.just(int)
-        }
         .take(1)
 })
 ```
