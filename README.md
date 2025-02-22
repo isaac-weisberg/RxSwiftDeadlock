@@ -1,3 +1,6 @@
+
+[RxSwift repo issue #2653](https://github.com/ReactiveX/RxSwift/issues/2653)
+
 ## How to deadlock in RxSwift:
 
 Step 0:
