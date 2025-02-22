@@ -11,32 +11,30 @@ import RxSwift
 class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     
-    
-    let sharedSubscription = Observable.create { observer in
-        observer.on(.next(3))
-        return Disposables.create()
-    }
-    .share(replay: 1)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sources = 0...100
-        let oneSource = Single.zip(sources.map { _ in
+        let sharedSubscription = Observable.create { observer in
+            observer.on(.next(3))
+            return Disposables.create()
+        }
+        .share(replay: 1)
+        
+        let sources = 0...50
+        let oneSource = Observable.zip(sources.map { _ in
             self.getSomeInfoFromNetwork()
                 .flatMap { _ in
-                    self.sharedSubscription
+                    sharedSubscription
                 }
                 .flatMap { int in
-                    Single.just(int)
+                    Observable.just(int)
                 }
                 .take(1)
-                .asSingle()
         })
         
         oneSource
             .debug("ASDF")
-            .subscribe(onSuccess: { [unowned self] _ in
+            .subscribe(onCompleted: { [unowned self] in
                 DispatchQueue.main.async { [unowned self] in
                     self.view.backgroundColor = .systemGreen
                 }
