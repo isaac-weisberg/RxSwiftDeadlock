@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A43F4A352D6A431A005598C1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A43F4A342D6A431A005598C1 /* RxSwift */; };
+		A461952C2D6B89F300E795F5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A461952B2D6B89F300E795F5 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43F4A352D6A431A005598C1 /* RxSwift in Frameworks */,
+				A461952C2D6B89F300E795F5 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = RxSwiftDeadlock;
 			packageProductDependencies = (
-				A43F4A342D6A431A005598C1 /* RxSwift */,
+				A461952B2D6B89F300E795F5 /* RxSwift */,
 			);
 			productName = RxSwiftDeadlock;
 			productReference = A43F4A1B2D6A424E005598C1 /* RxSwiftDeadlock.app */;
@@ -114,7 +114,7 @@
 			mainGroup = A43F4A122D6A424E005598C1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A43F4A332D6A431A005598C1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				A461952A2D6B89F300E795F5 /* XCRemoteSwiftPackageReference "RxSwiftAwait" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A43F4A1C2D6A424E005598C1 /* Products */;
@@ -346,20 +346,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A43F4A332D6A431A005598C1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		A461952A2D6B89F300E795F5 /* XCRemoteSwiftPackageReference "RxSwiftAwait" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			repositoryURL = "https://github.com/isaac-weisberg/RxSwiftAwait/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.9.0;
+				minimumVersion = 6.9.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A43F4A342D6A431A005598C1 /* RxSwift */ = {
+		A461952B2D6B89F300E795F5 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A43F4A332D6A431A005598C1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = A461952A2D6B89F300E795F5 /* XCRemoteSwiftPackageReference "RxSwiftAwait" */;
 			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

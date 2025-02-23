@@ -1,13 +1,13 @@
 {
-  "originHash" : "87bc79fcccc55ce355a01b2e68fcd580a18765a117cbee40f0c77cddde507f26",
+  "originHash" : "0a5969f1dec32fab48a6dc8b6e0db051261ab6441bf64ad564de7101c89dece3",
   "pins" : [
     {
-      "identity" : "rxswift",
+      "identity" : "rxswiftawait",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "location" : "https://github.com/isaac-weisberg/RxSwiftAwait/",
       "state" : {
-        "revision" : "5dd1907d64f0d36f158f61a466bab75067224893",
-        "version" : "6.9.0"
+        "revision" : "558dfb41b3360a6b5f20b8bbdd72872f1a5dde98",
+        "version" : "6.9.2"
       }
     }
   ],
