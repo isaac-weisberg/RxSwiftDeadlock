@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         }
         .share(replay: 1)
         
-        let sources = 0...50
+        let sources = 0...100
         let oneSource = Observable.zip(sources.map { _ in
             self.getSomeInfoFromNetwork()
                 .flatMap { _ in
