@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/isaac-weisberg/RxSwiftAwait/",
       "state" : {
-        "revision" : "558dfb41b3360a6b5f20b8bbdd72872f1a5dde98",
-        "version" : "6.9.2"
+        "revision" : "15ddc7411676b7700e7df6443f4ca59c1fb2ed8a",
+        "version" : "6.9.4"
       }
     }
   ],

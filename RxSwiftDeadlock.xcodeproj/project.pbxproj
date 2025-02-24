@@ -351,7 +351,7 @@
 			repositoryURL = "https://github.com/isaac-weisberg/RxSwiftAwait/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.9.2;
+				minimumVersion = 6.9.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
