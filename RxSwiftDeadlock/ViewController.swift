@@ -18,20 +18,25 @@ class ViewController: UIViewController {
             observer.on(.next(3))
             return Disposables.create()
         }
-        .share(replay: 1)
+        .multicast(PublishSubject())
+        .refCount()
         
-        let sources = 0...100
-        let oneSource = Observable.zip(sources.map { _ in
+        let sources = 0..<100
+        let resultsAsArray = Observable.merge(sources.map { _ in
             self.getSomeInfoFromNetwork()
                 .flatMap { _ in
                     sharedSubscription
                 }
                 .take(1)
+                .timeout(.seconds(1), scheduler: MainScheduler.asyncInstance)
+                .catch { _ in .empty() }
         })
+        .debug("ASDF")
+        .toArray()
         
-        oneSource
-            .debug("ASDF")
-            .subscribe(onCompleted: { [unowned self] in
+        resultsAsArray
+            .subscribe(onSuccess: { [unowned self] results in
+                assert(results.count == sources.upperBound)
                 DispatchQueue.main.async { [unowned self] in
                     self.view.backgroundColor = .systemGreen
                 }
